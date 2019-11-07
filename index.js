@@ -47,13 +47,14 @@ class Person {
     this.stomach = [];
 
   }
-  eat() {
-    return this.stomach.push();
+  eat(someFood) {
+    if (this.stomach.length < 10) { this.stomach.push(someFood);}
+    return this.stomach;
 
   }
 
   poop() {
-    return this.stomach = [];
+    this.stomach = [];
   }
 
   toString() {
@@ -89,11 +90,15 @@ class Car {
     this.tank += gallons;
   }
   drive(distance) {
-    return `${this.tank--} ${this.odometer++}`
-  }
 
-  fuel() {
-    return `I ran out of fuel at ${this.odometer}`
+    const gallons = distance / this.milesPerGallon;
+    if (this.tank >= gallons) {this.odometer += distance; this.tank -= gallons;} else {
+    const fuel = this.tank * this.milesPerGallon;
+    this.tank = 0;
+    this.odometer += fuel;
+   
+    return `I ran out of fuel at ${this.odometer} miles`
+    }
   }
 
 }
