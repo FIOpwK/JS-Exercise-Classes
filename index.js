@@ -160,6 +160,11 @@ class Instructor extends Lambdasian {
 
   }
 
+  // STRETCH using Math.random() method on Student grade
+  score(student, subject) {
+    return Math.random() + `${this.grade}`;
+  }
+
 }
 
 /*
@@ -183,6 +188,7 @@ class Student extends Lambdasian{
     this.previousBackground = args.previousBackground;
     this.className = args.className;
     this.favSubjects = args.favSubjects;
+    this.grade = 80;
 
   }
 
