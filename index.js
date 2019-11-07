@@ -205,6 +205,14 @@ class Student extends Lambdasian{
 
   }
 
+  // STRETCH - 
+  graduate(student, grade) {
+    if (grade >= 70) { return `Let ${student} Graduate!`} else {
+      return `Go back and study ${this.favSubjects}!`
+    }
+
+  }
+
 }
 
 /*
