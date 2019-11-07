@@ -86,7 +86,7 @@ class Car {
     this.odometer = 0;
   }
   fill(gallons) {
-    return gallons + this.tank;
+    this.tank += gallons;
   }
   drive(distance) {
     return `${this.tank--} ${this.odometer++}`
