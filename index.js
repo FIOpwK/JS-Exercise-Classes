@@ -164,7 +164,6 @@ class Instructor extends Lambdasian {
   score(student, subject) {
     return Math.random() + `${this.grade}`;
   }
-
 }
 
 /*
